@@ -1,15 +1,39 @@
 import dotenv from 'dotenv'
 import express from 'express'
+import cors from 'cors'
 
 dotenv.config();
 
 const app = express();
+app.use(cors())
 
 const port = process.env['PORT'];
 const serverUrl = process.env['SERVER_URL'];
 
 app.get("/todos", async (_req, res) => {
   const serverResponse = await fetch(serverUrl);
+  const data = await serverResponse.json();
+  res.json(data);
+})
+
+app.get("/todos/date", async (req, res) => {
+  const from = req.query['from'];
+  const to = req.query['to'];
+  const status = req.query['status'];
+
+  if (!from || !to) {
+    throw new Error("Не заданы значения параметров from, to")
+  }
+
+  const serverResponse = await fetch(`${serverUrl}/date?from=${from}&to=${to}` + (status ? `&status=${status}` : ''))
+  const data = await serverResponse.json();
+  res.json(data);
+})
+
+app.get("/todos/find", async (req, res) => {
+  const q = req.query['q'] || '';
+
+  const serverResponse = await fetch(`${serverUrl}/find?q=${q}`);
   const data = await serverResponse.json();
   res.json(data);
 })

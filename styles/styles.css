@@ -1,0 +1,57 @@
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background: #ECECEC;
+  min-height: 100dvh;
+}
+
+header {
+  background-color: lightgray;
+  height: 59px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+}
+.search-container {
+  background-color: #A9A9A9;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-container > input {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  color: #DDDDDD;
+  margin-left: 10px;
+}
+.search-container > input::placeholder {
+  color: #DDDDDD;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  min-height: 100%;
+}
+aside {
+  background: #ffffff;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
+aside > button.ui-button {
+  background: #C4C4C4;
+  color: #000000;
+  width: 100%;
+  font-size: 18px;
+}

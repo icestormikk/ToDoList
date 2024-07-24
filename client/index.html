@@ -19,17 +19,24 @@
     </header>
     <main>
       <aside>
-        <button class="ui-button ui-widget">Сегодня</button>
-        <button class="ui-button ui-widget">На неделю</button>
+        <button class="ui-button ui-widget" id="today-todos-button">Сегодня</button>
+        <button class="ui-button ui-widget" id="week-todos-button">На неделю</button>
         <div class="datepicker-container" id="datepicker"></div>
         <label for="is_uncompleted">
           Только невыполненные
           <input type="checkbox" name="is_uncompleted" id="is_uncompleted">
         </label>
       </aside>
-      <ul id="todos-list">
-
-      </ul>
+      <div id="todo-container-main">
+        <div id="todo-container-header">
+          <span class="today-date"></span>
+          <div id="todo-sorting">
+            <img src="styles/images/sort_icon.svg" alt="sort_icon">
+            <span>Сортировать по дате</span>
+          </div>
+        </div>
+        <div id="todo-container"></div>
+      </div>
     </main>
 
     <script src="js/script.js" type="module"></script>

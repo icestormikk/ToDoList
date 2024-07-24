@@ -55,3 +55,39 @@ aside > button.ui-button {
   width: 100%;
   font-size: 18px;
 }
+
+#todo-container-main {
+  padding: 10px;
+}
+#todo-container-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+}
+#todo-sorting {
+  cursor: pointer;
+}
+#todo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.todo-block {
+  background: #D2D2D2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+}
+.todo-text {
+  font-size: 18px;
+}
+.todo-datetime {
+  position: absolute;
+  bottom: 3%;
+  right: 3%;
+}

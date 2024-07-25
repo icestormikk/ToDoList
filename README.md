@@ -12,7 +12,7 @@ npm start
 После ввода этой команды сервер будет прослушивать порт 3000, сервер готов к работе.
 
 #### Запуск клиентской части:
-Клиентская часть представляет собой html-файл, набор css-файлов, изображений, а также набор javascript-файлов. Для запуска клиентской части потребуется или [VSC-расширение LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) или его аналоги (например, [Live](https://www.npmjs.com/package/live-server/v/0.8.0)).
+Клиентская часть представляет собой html-файл, набор css-файлов, изображений, а также набор javascript-файлов. Для запуска клиентской части потребуется или [VSC-расширение LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) или его аналоги (например, [live-server](https://www.npmjs.com/package/live-server/v/0.8.0)).
 
 В первом случае откройте прикрепленный html-файл, нажмите ПКМ и выберите опцию просмотра файла через LiveServer. Во втором случае введите следующую команду:
 ```bash

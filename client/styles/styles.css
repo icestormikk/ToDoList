@@ -56,6 +56,21 @@ aside > button.ui-button {
   font-size: 18px;
 }
 
+.message {
+  border-radius: 4px;
+  padding: 0px 10px;
+  font-size: 18px;
+  display: none;
+}
+#loading-message {
+  border: 1px solid black;
+  display: none;
+}
+#error-message {
+  border: 1px solid red;
+  color: red;
+}
+
 #todo-container-main {
   padding: 10px;
 }
@@ -82,6 +97,7 @@ aside > button.ui-button {
   align-items: center;
   padding: 10px;
   position: relative;
+  cursor: pointer;
 }
 .todo-text {
   font-size: 18px;
@@ -90,4 +106,33 @@ aside > button.ui-button {
   position: absolute;
   bottom: 3%;
   right: 3%;
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#modal-todo-name {
+  font-size: 24px;
+}
+#modal-todo-datetime {
+  font-size: 12px;
+}
+#modal-body {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.ui-datepicker td.range {
+  background-color: #d0e9c6;
+}
+.ui-datepicker td.range a {
+  background-color: #d0e9c6;
+  color: #555;
+}
+.ui-datepicker td.selected-start, .ui-datepicker td.selected-end {
+  background-color: #f00;
+  color: white;
 }

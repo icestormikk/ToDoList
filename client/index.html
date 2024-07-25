@@ -11,13 +11,16 @@
   </head>
   <body>
     <header>
+      <!-- Поисковая строка -->
       <div class="search-container">
         <img src="styles/images/search-icon.svg" alt="search-icon">
         <input type="text" id="searchbar" placeholder="Поиск">
       </div>
       <img src="styles/images/account_photo.svg" alt="account_photo">
     </header>
+
     <main>
+      <!-- Боковое меню -->
       <aside>
         <button class="ui-button ui-widget" id="today-todos-button">Сегодня</button>
         <button class="ui-button ui-widget" id="week-todos-button">На неделю</button>
@@ -27,7 +30,11 @@
           <input type="checkbox" name="is_uncompleted" id="is_uncompleted">
         </label>
       </aside>
+      <!-- Контейнер с todo-шками -->
       <div id="todo-container-main">
+        <div id="loading-message">
+          <p>Загружаю данные...</p>
+        </div>
         <div id="todo-container-header">
           <span class="today-date"></span>
           <div id="todo-sorting">
@@ -38,6 +45,20 @@
         <div id="todo-container"></div>
       </div>
     </main>
+
+    <!-- Модальное окно -->
+    <div id="dialog" title="Download complete">
+      <div class="modal-header">
+        <div class="model-info">
+          <b id="modal-todo-name">Название</b>
+          <p id="modal-todo-datetime">08.05.2022 00:10</p>
+        </div>
+        <img id="modal-todo-status" src="" alt="status_icon">
+      </div>
+      <div id="modal-body">
+        <p id="modal-todo-desc"></p>
+      </div>
+    </div>
 
     <script src="js/script.js" type="module"></script>
   </body>

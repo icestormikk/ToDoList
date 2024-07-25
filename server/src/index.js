@@ -10,12 +10,18 @@ app.use(cors())
 const port = process.env['PORT'];
 const serverUrl = process.env['SERVER_URL'];
 
+/**
+ * Получение списка всех задач
+ */
 app.get("/todos", async (_req, res) => {
   const serverResponse = await fetch(serverUrl);
   const data = await serverResponse.json();
   res.json(data);
 })
 
+/**
+ * Получение списка всех задач в определённом диапазоне дат
+ */
 app.get("/todos/date", async (req, res) => {
   const from = req.query['from'];
   const to = req.query['to'];
@@ -30,9 +36,13 @@ app.get("/todos/date", async (req, res) => {
   res.json(data);
 })
 
+/**
+ * Получение списка дат, имеющих в своём названии определённую строку
+ */
 app.get("/todos/find", async (req, res) => {
   const q = req.query['q'] || '';
 
+  console.log(`${serverUrl}/find?q=${q}`)
   const serverResponse = await fetch(`${serverUrl}/find?q=${q}`);
   const data = await serverResponse.json();
   res.json(data);
